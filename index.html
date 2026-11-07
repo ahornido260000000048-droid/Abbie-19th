@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abbie's post Birthday Kain with a twist!</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 class="title">Abbie's post Birthday Kain with a twist!</h1>
+
+<main class="stage">
+  <div class="fridge" id="fridge">
+    <!-- INSIDE -->
+    <div class="inside" id="inside">
+      <section class="shelf">
+        <h2>Kain ta sa Thirdy's 🍽️</h2>
+        <div class="row">
+          <figure class="polaroid tilt-l"><span class="tape"></span><img data-id="1scaUEP08mAhVS3voVlOm8AbRGJPQuih1" alt="Thirdy's"><figcaption>Thirdy's</figcaption></figure>
+          <ul class="info">
+            <li><b>What:</b> Kain ta sa Thirdy's</li>
+            <li><b>When:</b> After Youth Fellowship, next FRIDAY (November 13)</li>
+            <li><b>Where:</b> Thirdy’s food haus <button class="btn blue" id="mapBtn">Click Me</button></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="shelf">
+        <h2>Here's their Menu 📒</h2>
+        <div class="menu" id="menu"></div>
+        <button class="btn pink" id="riceBtn">YOU WANT A TWIST? CLICK ME!</button>
+      </section>
+
+      <section class="shelf final">
+        <h2>READY FOR THE FINAL TWIST?</h2>
+        <button class="push" id="pushBtn"><span>PUSH ME</span></button>
+      </section>
+    </div>
+
+    <!-- DOOR -->
+    <div class="door" id="door">
+      <div class="denim-band"><i></i><i></i></div>
+      <div class="handle"></div>
+      <div class="magnets">
+        <figure class="polaroid m1"><span class="magnet"></span><img data-id="1LWrm67NkCbAplPRloPT5mx8B9HIoRUWq" alt=""></figure>
+        <figure class="polaroid m2"><span class="magnet star"></span><img data-id="1o9Aj2rphi93-LhoBMh5TuqNM3Cxi3T6d" alt=""></figure>
+        <figure class="polaroid m3"><span class="magnet heart"></span><img data-id="1c-w24pjAhN1Vyns0dGPeRotgw5rl1RZ8" alt=""></figure>
+        <figure class="polaroid m4"><span class="magnet"></span><img data-id="1z7jCpLIBrzWOPLUVeyUslWoMWY1GINDt" alt=""></figure>
+      </div>
+      <div class="pocket p1"></div><div class="pocket p2"></div>
+      <div class="logo">Smeg</div>
+    </div>
+  </div>
+  <p class="drag-hint" id="dragHint">Drag to open the fridge!</p>
+</main>
+
+<!-- MAP -->
+<div class="modal" id="mapModal"><div class="card wide">
+  <button class="x" data-close>✕</button>
+  <h3>From CHURCH to THIRDY'S 🚶</h3>
+  <svg id="map" viewBox="0 0 400 300"></svg>
+  <p id="steps" class="steps"></p>
+  <div class="links">
+    <a class="btn blue" target="_blank" href="https://share.google/ciGXyPBhJQUlRrDpL">Church (Google Maps)</a>
+    <a class="btn pink" target="_blank" href="https://share.google/K9NDfWIw8eDfbqlb9">Thirdy's (Google Maps)</a>
+    <button class="btn cream" id="replay">Replay ▶</button>
+  </div>
+</div></div>
+
+<!-- CALCULATOR -->
+<div class="modal" id="calcModal"><div class="calc-wrap">
+  <div class="card calc">
+    <button class="x" data-close>✕</button>
+    <h3>CALCULATE THE AGE OF ABBIE</h3>
+    <div class="screen"><small id="expr">&nbsp;</small><div id="out">0</div></div>
+    <div class="keys" id="keys"></div>
+  </div>
+  <div class="note" id="hintNote">📌 HINT<span id="hintText"></span></div>
+</div></div>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
