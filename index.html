@@ -2,139 +2,94 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abbie's Post Birthday Kain with a Twist!</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Fraunces:ital,wght@1,700;1,900&family=Caveat:wght@600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abbie's post Birthday Kain with a twist!</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="top">
-  <div class="denim-strip" aria-hidden="true"></div>
-  <h1>Abbie’s post Birthday Kain <span>with a twist!</span></h1>
-  <svg class="bunting" viewBox="0 0 400 62" aria-hidden="true"><path d="M18 6Q200 46 382 6" fill="none" stroke="#35557f" stroke-width="2" stroke-dasharray="5 3"/><path d="M21.2 9.5L55.2 9.5L38.2 43.5Z" fill="#7fb2d8" stroke="#35557f" stroke-width="1.2"/><path d="M61.7 16.0L95.7 16.0L78.7 50.0Z" fill="#fbf3e0" stroke="#35557f" stroke-width="1.2"/><path d="M102.1 21.3L136.1 21.3L119.1 55.3Z" fill="#35557f" stroke="#35557f" stroke-width="1.2"/><path d="M142.6 24.8L176.6 24.8L159.6 58.8Z" fill="#e8799f" stroke="#35557f" stroke-width="1.2"/><path d="M183.0 26.0L217.0 26.0L200.0 60.0Z" fill="#f0cf79" stroke="#35557f" stroke-width="1.2"/><path d="M223.4 24.8L257.4 24.8L240.4 58.8Z" fill="#7fb2d8" stroke="#35557f" stroke-width="1.2"/><path d="M263.9 21.3L297.9 21.3L280.9 55.3Z" fill="#fbf3e0" stroke="#35557f" stroke-width="1.2"/><path d="M304.3 16.0L338.3 16.0L321.3 50.0Z" fill="#35557f" stroke="#35557f" stroke-width="1.2"/><path d="M344.8 9.5L378.8 9.5L361.8 43.5Z" fill="#e8799f" stroke="#35557f" stroke-width="1.2"/></svg>
-</header>
+<h1 class="title">Abbie's post Birthday Kain with a twist!</h1>
 
-<main class="scene">
-
-  <section class="zone">
-    <div class="wrap3d">
-      <div class="fridge" id="fridge">
-        <div class="floor-shadow"></div>
-        <div class="shell"></div>
-        <i class="hinge" style="top:12%"></i><i class="hinge" style="top:48%"></i><i class="hinge" style="top:84%"></i>
-        <div class="base" aria-hidden="true"></div>
-
-        <!-- INSIDE -->
-        <div class="cab"><div class="light"></div><div class="mist"><i></i><i></i><i></i><i></i></div><div class="gasket"></div>
-          <div class="inside" id="inside">
-
-            <!-- Layer 1 -->
-            <section class="shelf">
-              <article class="paper plan">
-                <div class="plan-text">
-                  <span class="lbl">The Plan</span>
-                  <p><b>What:</b> Kain ta sa Thirdy’s</p>
-                  <p><b>When:</b> After Youth Fellowship, next Friday (November 13)</p>
-                  <p><b>Where:</b> Thirdy’s Food Haus</p>
-                  <button class="btn" id="mapBtn">Click Me</button>
-                </div>
-                <figure class="polaroid small" style="--r:3deg"><i class="tape"></i><img data-drive="1scaUEP08mAhVS3voVlOm8AbRGJPQuih1" data-fallback="assets/thirdys.jpg" alt="Thirdy’s Food Haus"><figcaption>Thirdy’s</figcaption></figure>
-              </article>
-            </section>
-
-            <!-- Layer 2 -->
-            <section class="shelf">
-              <h2 class="stitle">Here’s their Menu</h2>
-              <div class="menu">
-                <article class="paper"><h3>Budget Meals</h3><ul>
-                  <li><span>Pork Signature Sisig</span><b>₱88</b></li><li><span>Chicken Skin</span><b>₱88</b></li><li><span>Grilled BBQ Pork Chop</span><b>₱88</b></li><li><span>pcs Chicken Wings</span><b>₱108</b></li><li><span>Chicharon Bulaklak</span><b>₱108</b></li></ul></article>
-                <article class="paper blue"><h3>Special Menu</h3><ul>
-                  <li><span>Grilled Pork Belly Liempo</span><b>₱168</b></li><li><span>Sizzling Signature Platter</span><b>₱168</b></li><li><span>Sizzling Crispy Sisig + Bagnet</span><b>₱234</b></li><li><span>Sizzling Whole Bangus w/ Sauce</span><b>₱168</b></li><li><span>Deep Fried Whole Bangus</span><b>₱168</b></li></ul></article>
-                <article class="paper"><h3>Combo Meals</h3><ul>
-                  <li><span>A. Pork Sisig w/ Chicken</span><b>₱188</b></li><li><span>B. Pork Sisig w/ Chicharon Bulaklak</span><b>₱188</b></li><li><span>C. Pork Sisig w/ Chicken Skin</span><b>₱168</b></li><li><span>D. Pork Sisig w/ Grilled Pork Chop</span><b>₱168</b></li></ul></article>
-                <div class="mini-row">
-                  <article class="paper blue"><h3>Appetizer</h3><ul><li><span>Beef Mami Overload</span><b>₱60</b></li><li><span>Palabok Overload</span><b>₱70</b></li></ul></article>
-                  <article class="paper"><h3>Desserts</h3><ul><li><span>Fluffy Mango Float</span><b>₱120</b></li><li><span>Giant Special Tapioca</span><b>₱100</b></li></ul></article>
-                  <article class="paper blue"><h3>Drinks</h3><ul><li><span>Small Coke</span><b>₱15</b></li><li><span>Mineral Water</span><b>₱15</b></li></ul></article>
-                </div>
-              </div>
-              <button class="btn big" id="twistBtn">You want a twist? Click me!</button>
-            </section>
-
-            <!-- Layer 3 -->
-            <section class="shelf last">
-              <h2 class="stitle">Ready for the final twist?</h2>
-              <button class="push" id="pushBtn" aria-label="Push me"><span>PUSH ME</span></button>
-            </section>
-          </div>
-        </div>
-
-        <!-- DOOR (drag me) -->
-        <div class="door" id="door" aria-label="Fridge door. Drag to open.">
-          <div class="groove"></div><div class="gloss"></div>
-          <div class="logo-plate">SMEG</div>
-          <div class="ribbon"><span>Happy Birthday, Abbie!</span></div>
-
-          <!-- Photos stuck on the door with magnets -->
-          <figure class="dp p1" style="--r:-5deg"><i class="mag m-red"></i><img data-drive="1LWrm67NkCbAplPRloPT5mx8B9HIoRUWq" data-fallback="assets/photo1.jpg" alt="Photo of Abbie"><figcaption>memories ♥</figcaption></figure>
-          <figure class="dp p2" style="--r:4deg"><i class="mag m-yellow"></i><img data-drive="1o9Aj2rphi93-LhoBMh5TuqNM3Cxi3T6d" data-fallback="assets/photo2.jpg" alt="Photo of Abbie"><figcaption>good times</figcaption></figure>
-          <figure class="dp p3" style="--r:4deg"><i class="mag m-denim"></i><img data-drive="1c-w24pjAhN1Vyns0dGPeRotgw5rl1RZ8" data-fallback="assets/photo3.jpg" alt="Photo of Abbie"><figcaption>celebrate ✿</figcaption></figure>
-          <figure class="dp p4" style="--r:-4deg"><i class="mag m-pink"></i><img data-drive="1z7jCpLIBrzWOPLUVeyUslWoMWY1GINDt" data-fallback="assets/photo4.jpg" alt="Photo of Abbie"><figcaption>grateful</figcaption></figure>
-          <button class="hdl top" id="hdlTop" aria-label="Open the fridge"></button>
-          <button class="hdl bot" id="hdlBot" aria-label="Open the fridge"></button>
-          <div class="stk ticket">good things<br>are coming<small>No. 4846</small></div>
-          <div class="stk heart"><span>you<br>got<br>this</span></div>
-          <div class="stk pocket-d"><span>kain ta!</span><small>Nov 13</small></div>
-          <div class="stk e1">🍪</div><div class="stk e2">🌼</div><div class="stk e3">⭐</div><div class="stk e4">🎀</div>
-        </div>
-      </div>
+<main class="stage" id="stage">
+  <div class="oven" id="oven">
+    <div class="panel">
+      <div class="knob" data-k></div><i class="lamp"></i>
+      <div class="knob" data-k></div>
+      <i class="lamp"></i><div class="knob" data-k></div>
     </div>
-    <p class="caption" id="caption"><span class="pill">Drag to open the fridge!</span></p>
-    <p class="caption hidden" id="closeWrap"><button class="pill" id="closeBtn">Close the fridge</button></p>
-  </section>
+    <div class="cavity"><div class="rack"></div><div class="rack"></div><div class="rack"></div></div>
+    <div class="door" id="door">
+      <div class="handle"></div>
+      <div class="window"></div>
+      <div class="denim-band"><i></i><i></i><i></i></div>
+      <div class="magnets">
+        <figure class="polaroid m1"><span class="magnet"></span><img data-id="1LWrm67NkCbAplPRloPT5mx8B9HIoRUWq" alt=""></figure>
+        <figure class="polaroid m2"><span class="magnet star"></span><img data-id="1o9Aj2rphi93-LhoBMh5TuqNM3Cxi3T6d" alt=""></figure>
+        <figure class="polaroid m3"><span class="magnet heart"></span><img data-id="1c-w24pjAhN1Vyns0dGPeRotgw5rl1RZ8" alt=""></figure>
+        <figure class="polaroid m4"><span class="magnet"></span><img data-id="1z7jCpLIBrzWOPLUVeyUslWoMWY1GINDt" alt=""></figure>
+      </div>
+      <div class="logo">Smeg</div>
+    </div>
+    <div class="vents"></div>
+  </div>
+  <p class="drag-hint" id="dragHint">Drag to open the oven!</p>
 </main>
 
-<!-- MAP MODAL -->
-<div class="modal" id="mapModal" role="dialog" aria-modal="true" aria-label="Route from church to Thirdy's">
-  <div class="box mapbox">
-    <button class="x" data-close aria-label="Close">✕</button>
-    <h3 class="mt">Church → Thirdy’s</h3>
-    <div class="tabs"><button class="tab on" data-mode="car">🚗 Drive</button><button class="tab" data-mode="foot">🚶 Walk</button></div>
-    <div class="banner" id="nowOn">Finding the route…</div>
-    <div id="leaf"></div>
-    <ol class="steps" id="steps"></ol>
-    <div class="row"><button class="btn sm" id="replay">↻ Replay</button>
-      <a class="btn sm" href="https://share.google/ciGXyPBhJQUlRrDpL" target="_blank" rel="noopener">Church on Maps</a>
-      <a class="btn sm" href="https://share.google/K9NDfWIw8eDfbqlb9" target="_blank" rel="noopener">Thirdy’s on Maps</a></div>
-  </div>
-</div>
-
-<!-- CALCULATOR MODAL -->
-<div class="modal" id="calcModal" role="dialog" aria-modal="true" aria-label="Calculator">
-  <div class="box calcbox">
-    <button class="x" data-close aria-label="Close">✕</button>
-    <div class="calc">
-      <div class="engrave">CALCULATE THE AGE OF ABBIE</div>
-      <div class="expr" id="calcExpr">&nbsp;</div>
-      <div class="screen" id="calcDisp" aria-live="polite">0</div>
-      <div class="keys" id="keys">
-        <button class="k fn" data-k="C">C</button><button class="k fn" data-k="⌫">⌫</button><button class="k op" data-k="÷">÷</button><button class="k op" data-k="×">×</button>
-        <button class="k" data-k="7">7</button><button class="k" data-k="8">8</button><button class="k" data-k="9">9</button><button class="k op" data-k="-">−</button>
-        <button class="k" data-k="4">4</button><button class="k" data-k="5">5</button><button class="k" data-k="6">6</button><button class="k op" data-k="+">+</button>
-        <button class="k" data-k="1">1</button><button class="k" data-k="2">2</button><button class="k" data-k="3">3</button><button class="k eq" data-k="=">=</button>
-        <button class="k zero" data-k="0">0</button><button class="k" data-k=".">.</button>
+<!-- INSIDE: 3 LAYERS (zoom view) -->
+<div class="inside" id="inside">
+  <button class="closeoven" id="closeOven">⬆ Close the oven</button>
+  <nav class="dots" id="dots"><i class="on"></i><i></i><i></i></nav>
+  <div class="layers" id="layers">
+    <section class="layer">
+      <h2>Kain ta sa Thirdy's 🍽️</h2>
+      <div class="row">
+        <figure class="polaroid tilt"><span class="tape"></span><img data-id="1scaUEP08mAhVS3voVlOm8AbRGJPQuih1" alt="Thirdy's"><figcaption>Thirdy's</figcaption></figure>
+        <ul class="info">
+          <li><b>What:</b> Kain ta sa Thirdy's</li>
+          <li><b>When:</b> After Youth Fellowship, next FRIDAY (November 13)</li>
+          <li><b>Where:</b> Thirdy’s food haus <button class="btn blue" id="mapBtn">Click Me</button></li>
+        </ul>
       </div>
-    </div>
-    <button class="hint" id="hint" aria-label="Hint"><b>HINT</b><span id="hintText">tap me</span></button>
+      <p class="swipe">scroll down for the next layer ⌄</p>
+    </section>
+    <section class="layer">
+      <h2>Here's their Menu 📒</h2>
+      <div class="menu" id="menu"></div>
+      <button class="btn pink" id="riceBtn">YOU WANT A TWIST? CLICK ME!</button>
+    </section>
+    <section class="layer final">
+      <h2>READY FOR THE FINAL TWIST?</h2>
+      <button class="push" id="pushBtn"><span>PUSH ME</span></button>
+    </section>
   </div>
 </div>
 
-<button class="snd" id="snd" aria-label="Toggle sound">🔊</button>
-<div class="toast" id="toast" role="status" aria-live="assertive"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<!-- MAP -->
+<div class="modal" id="mapModal"><div class="card wide">
+  <button class="x" data-close>✕</button>
+  <h3>From CHURCH to THIRDY'S 🚶</h3>
+  <svg id="map" viewBox="0 0 400 300"></svg>
+  <p id="steps" class="steps"></p>
+  <div class="links">
+    <a class="btn blue" target="_blank" href="https://share.google/ciGXyPBhJQUlRrDpL">Church (Google Maps)</a>
+    <a class="btn pink" target="_blank" href="https://share.google/K9NDfWIw8eDfbqlb9">Thirdy's (Google Maps)</a>
+    <button class="btn cream" id="replay">Replay ▶</button>
+  </div>
+</div></div>
+
+<!-- CALCULATOR -->
+<div class="modal" id="calcModal"><div class="calc-wrap">
+  <div class="card calc">
+    <button class="x" data-close>✕</button>
+    <h3>CALCULATE THE AGE OF ABBIE</h3>
+    <div class="screen"><small id="expr">&nbsp;</small><div id="out">0</div></div>
+    <div class="keys" id="keys"></div>
+  </div>
+  <div class="note" id="hintNote">📌 HINT<span id="hintText"></span></div>
+</div></div>
+
+<!-- CREATIVE POPUP -->
+<div class="toast" id="toast"><div class="conf" id="conf"></div><div class="ttl" id="ttl"></div><div class="msg" id="msg"></div></div>
 <script src="script.js"></script>
 </body>
 </html>
