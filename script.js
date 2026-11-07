@@ -13,7 +13,7 @@ document.querySelectorAll('[data-k]').forEach(k=>{let a=0;k.onclick=()=>{a+=70;k
 const door=$('door'),oven=$('oven'),hint=$('dragHint'),inside=$('inside');
 let startY=0,angle=0,drag=false,isOpen=false;
 const MAX=85;
-const setAngle=a=>{angle=Math.max(0,Math.min(MAX,a));door.style.transform=`rotateX(${-angle}deg)`};
+const setAngle=a=>{angle=Math.max(0,Math.min(MAX,a));door.style.transform=`rotateX(${-angle}deg)`;oven.classList.toggle('open',angle>8)};
 door.addEventListener('pointerdown',e=>{drag=true;startY=e.clientY;door.classList.add('dragging');door.setPointerCapture(e.pointerId)});
 door.addEventListener('pointermove',e=>{if(!drag)return;setAngle((e.clientY-startY)/oven.offsetHeight*MAX*2.2)});
 function finish(){
@@ -53,7 +53,7 @@ function popup(title,sub,ms,emojis){
     b.style.setProperty('--x',Math.cos(a)*d+'px');b.style.setProperty('--y',Math.sin(a)*d+'px');b.style.setProperty('--r',Math.random()*360+'deg');c.appendChild(b)}
   $('toast').classList.add('show');clearTimeout(tT);tT=setTimeout(()=>$('toast').classList.remove('show'),ms);
 }
-$('riceBtn').onclick=()=>popup('YOU CAN HAVE UNLIMITED RICE','🍚 refill as much as you like! 🍚',3000,['🍚','🌾','✨','🍽️']);
+$('riceBtn').onclick=()=>popup('YOU CAN HAVE UNLIMITED RICE','🍚 refill as much as you like! 🍚',2000,['🍚','🌾','✨','🍽️']);
 
 const open=id=>$(id).classList.add('show');let raf;
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>{b.closest('.modal').classList.remove('show');cancelAnimationFrame(raf)});
@@ -63,9 +63,9 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('pointerdown',
    EDIT: replace street names with the real ones. Coordinates are on a 400x300 canvas. */
 const STREETS=[
  {name:'Church Road',pts:[[40,250],[200,250]],lx:70,ly:268},
- {name:'Rizal Street',pts:[[200,250],[200,140]],lx:206,ly:205},
- {name:'Bonifacio Avenue',pts:[[200,140],[340,140]],lx:225,ly:132},
- {name:'Quezon Street',pts:[[340,140],[340,50]],lx:346,ly:100}
+ {name:'Padre Zamora St.',sub:'(Beside Ateneo)',pts:[[200,250],[200,140]],lx:206,ly:200},
+ {name:'Jacinto St.',pts:[[200,140],[340,140]],lx:245,ly:132},
+ {name:'Fatima St.',pts:[[340,140],[340,50]],lx:346,ly:100}
 ];
 const OTHER=[[[30,150],[200,150]],[[100,30],[100,290]],[[270,20],[270,290]],[[30,60],[390,60]],[[30,200],[390,200]]];
 const NS='http://www.w3.org/2000/svg';
@@ -74,7 +74,7 @@ function drawMap(){
   const line=(pts,cls)=>{const p=document.createElementNS(NS,'path');p.setAttribute('d','M'+pts.map(q=>q.join(',')).join(' L'));p.setAttribute('class',cls);svg.appendChild(p);return p};
   OTHER.forEach(o=>line(o,'roadedge'));STREETS.forEach(s=>line(s.pts,'roadedge'));
   OTHER.forEach(o=>line(o,'road'));STREETS.forEach(s=>line(s.pts,'road'));
-  STREETS.forEach(s=>{const t=document.createElementNS(NS,'text');t.setAttribute('x',s.lx);t.setAttribute('y',s.ly);t.setAttribute('class','rlabel');t.textContent=s.name;svg.appendChild(t)});
+  STREETS.forEach(s=>{const t=document.createElementNS(NS,'text');t.setAttribute('x',s.lx);t.setAttribute('y',s.ly);t.setAttribute('class','rlabel');t.textContent=s.name;if(s.sub){const u=document.createElementNS(NS,'tspan');u.setAttribute('x',s.lx);u.setAttribute('dy','11');u.textContent=s.sub;t.appendChild(u)}svg.appendChild(t)});
   const all=[];STREETS.forEach((s,i)=>s.pts.forEach((p,j)=>{if(!(i&&j===0))all.push(p)}));
   const route=line(all,'');route.id='route';
   const L=route.getTotalLength();route.style.strokeDasharray=L;route.style.strokeDashoffset=L;
@@ -112,7 +112,7 @@ function press(k){
     let r;try{r=Function('"use strict";return ('+expr.replace(/×/g,'*').replace(/÷/g,'/').replace(/−/g,'-')+')')()}catch{r=NaN}
     if(!isFinite(r)){$('out').textContent='Error';expr='';return}
     r=Math.round(r*1e8)/1e8;show(expr+' = '+r);$('out').textContent=r;expr=String(r);justEq=true;
-    if(r===19)popup('KKB PO TAYO!','🎂 Abbie is 19! 🎂',5000,['🎉','🎂','🎈','💙','✨']);
+    if(r===19)popup('KKB PO TAYO!','🎂 Abbie is 19! 🎂',2000,['🎉','🎂','🎈','💙','✨']);
     return;
   }
   const isOp='÷×−+'.includes(k);
